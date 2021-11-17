@@ -31,16 +31,21 @@ export default function Login({ setToken }) {
   return(
     <div className="login-wrapper">
         <h1 class="glow" style={{fontFamily:'importanttitle', fontWeight:'lighter'}} >Universal text RPG</h1>
+
       <h1>Please Log In</h1>
+
       <form onSubmit={handleSubmit}>
-        <label>
-          <img className="icon" src={Identity} alt=""/>
-          <input type="text" placeholder="Name" onChange={e => setUserName(e.target.value)}/><br/>
-        </label>
-        <label>
-          <img className="icon" src={Keys} alt=""/>
-          <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
-        </label>
+        <table>
+          <tr> 
+              <td><img className="icon" src={Identity} alt=""/></td>
+              <td><input type="text" placeholder="Name" onChange={e => setUserName(e.target.value)}/></td>
+          </tr>
+          <tr> 
+              <td><img className="icon" style={{padding:10}} src={Keys} alt=""/></td>
+              <td><input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/></td>
+          </tr>
+        </table>
+
         <div>
           <button type="submit">Submit</button>
         </div>
