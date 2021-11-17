@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: logoshit;
+  font-family: importanttitle;
   src: url(../../fonts/The\ Centurion.otf);
 }
 
@@ -19,7 +19,7 @@ body {
   font-family: fancyshit;
 }
 h1 {
-  font-family: logoshit;
+  font-family: importanttitle;
   font-weight: lighter;
 }
 
@@ -34,11 +34,9 @@ h1 {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffff, 0 0 40px #ffff,
-      0 0 50px #ffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
+    text-shadow: 0 0 10px #ffffff;
   }
   to {
-    text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff,
-      0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff, 0 0 80px #ffffff;
+    text-shadow: 0 0 80px #ffffff;
   }
 }
