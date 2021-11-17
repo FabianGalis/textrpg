@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import './Login.css';
 import Identity from '../../icons/identity.png'
@@ -31,6 +32,9 @@ export default function Login({ setToken }) {
 
   return(
     <div className="login-wrapper">
+      <Helmet>
+        <title>UniTextRPG</title>
+      </Helmet>
       <h1 class="glow" style={{fontFamily:'importanttitle', fontWeight:'lighter'}} >Universal text RPG</h1>
 
       <h1>Please Log In</h1>
@@ -48,10 +52,11 @@ export default function Login({ setToken }) {
         </table>
 
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit">Proceed</button> 
         </div>
       </form>
-      <img style={{paddingTop:100, width:1000 }} src={Line} alt=""/>
+      <img style={{paddingTop:100, width:500 }} src={Line} alt=""/>
+
     </div>
   )
 }
