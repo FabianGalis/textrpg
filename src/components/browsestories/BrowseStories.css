@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.stories {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.stories .story {
+  margin: 15px;
+  padding: 15px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.stories .story .story-title {
+  position: relative;
+  font-size: 26px;
+  padding-right: 80px;
+  transition: all 0.4s ease;
+}
+
+.stories .story .story-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url("../../icons/arrow.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transition: all 0.4s ease-out;
+}
+
+.stories .story .story-summary {
+  font-size: 20px;
+  background-color: #181818;
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s ease-out;
+}
+
+.stories .story.expanded .story-title {
+  margin-bottom: 15px;
+}
+
+.stories .story.expanded .story-title::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.stories .story.expanded .story-summary {
+  max-height: 1000px;
+  opacity: 1;
+}
