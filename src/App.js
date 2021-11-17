@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -19,14 +19,16 @@ function App() {
 
   return (
     <div className="wrapper">
-      <h1>Application</h1>
+      <h1>Welcome back</h1>
       <BrowserRouter>
         <Routes>
          <Route exact path='/' element={<Dashboard/>}>
           </Route>
-          <Route exact path='/' element={<Preferences/>}>
-          </Route>
         </Routes>
+        <Routes>
+        <Route exact path='/' element={<Preferences/>}>
+          </Route>
+          </Routes>
       </BrowserRouter>
     </div>
   );

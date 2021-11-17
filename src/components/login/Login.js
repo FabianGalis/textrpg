@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Login.css';
+import Identity from '../../icons/identity.png'
+import Keys from '../../icons/keys.png'
 
 async function loginUser(credentials) {
   return fetch('http://localhost:8080/login', {
@@ -28,16 +30,16 @@ export default function Login({ setToken }) {
 
   return(
     <div className="login-wrapper">
-        <h1 class="glow" >Universal text RPG</h1>
-      <h2>Please Log In</h2>
+        <h1 class="glow" style={{fontFamily:'importanttitle', fontWeight:'lighter'}} >Universal text RPG</h1>
+      <h1>Please Log In</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          <p>Username</p>
-          <input type="text" onChange={e => setUserName(e.target.value)}/>
+          <img className="icon" src={Identity} alt=""/>
+          <input type="text" placeholder="Name" onChange={e => setUserName(e.target.value)}/><br/>
         </label>
         <label>
-          <p>Password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)}/>
+          <img className="icon" src={Keys} alt=""/>
+          <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
         </label>
         <div>
           <button type="submit">Submit</button>
