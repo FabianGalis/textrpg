@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Login.css';
 import Identity from '../../icons/identity.png'
 import Keys from '../../icons/keys.png'
+import Line from '../../icons/line.png'
 
 async function loginUser(credentials) {
   return fetch('http://localhost:8080/login', {
@@ -30,7 +31,7 @@ export default function Login({ setToken }) {
 
   return(
     <div className="login-wrapper">
-        <h1 class="glow" style={{fontFamily:'importanttitle', fontWeight:'lighter'}} >Universal text RPG</h1>
+      <h1 class="glow" style={{fontFamily:'importanttitle', fontWeight:'lighter'}} >Universal text RPG</h1>
 
       <h1>Please Log In</h1>
 
@@ -50,7 +51,7 @@ export default function Login({ setToken }) {
           <button type="submit">Submit</button>
         </div>
       </form>
-
+      <img style={{paddingTop:100, width:1000 }} src={Line} alt=""/>
     </div>
   )
 }
