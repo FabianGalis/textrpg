@@ -10,8 +10,8 @@ function DisplayStory ({story, index, togglestory}) {
 			onClick={() => togglestory(index)}
 		>
 			<div style={{color:story.color}} className="story-title">
-				{story.title}
-        <div style={{color:'white',float:'right', backgroundColor:'#181818', borderRadius:'20px'}}>0/{story.slots}</div>
+        <div style={{width:50,fontSize:15, textAlign:'center', backgroundColor:'#181818', borderRadius:'20px'}}>0/{story.slots}</div>
+        {story.title}
         <div style={{fontSize:18}}>by {story.author}</div>
 
 			</div>
@@ -48,6 +48,30 @@ function BrowseStories () {
       summary: "When your human kingdom places an embargo on the neighboring elf kingdom, they retaliate by unleashing a curse. Luckily, the humans have a select group of vigilantes ready to make the curse vanish. Will you and your party be up to the challenges?",
       slots:5,
       color: "rgb(190, 190, 190)",
+      expanded: false
+    },
+    {
+      title: "Angels and Demons",
+      author:'Just a bard ★',
+      summary: "In a world of angels and demons, humans are a rare commodity, and any who survived The Great War are in hiding. Now, years after the war started, your little brother has gone missing. The elders forbid you from searching for him, claiming it is too dangerous, too volatile. You leave anyway, only to run face first into a handsome renegade angel, with a sword in hand and death in his eyes. He sees your desperation, your humanity, and promises you one thing: He will help you on your journey or die trying. With your brother missing and humans being sold to the highest supernatural bidder, you don't have time to be wary. It's you and one broken angel against a whole world.",
+      slots:1,
+      color: "crimson",
+      expanded: false
+    },
+    {
+      title: "Intriguing manuscript",
+      author:'Scribe ★★',
+      summary: "",
+      slots:1,
+      color: "green",
+      expanded: false
+    },
+    {
+      title: "World War Zero",
+      author:'Smort Boi ★★',
+      summary: "",
+      slots:5,
+      color: "gray",
       expanded: false
     }
   ]);
