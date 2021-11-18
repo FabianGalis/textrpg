@@ -5,9 +5,11 @@ import { Helmet } from 'react-helmet';
 
 import useToken from './useToken';
 
-import Dashboard from './components/dashboard/Dashboard';
-import BrowseStories from './components/browsestories/BrowseStories';
 import Login from './components/login/Login';
+import PlayerProfile from './components/playerprofile/PlayerProfile';
+import Characters from './components/characters/Characters';
+import BrowseStories from './components/browsestories/BrowseStories';
+
 
 
 function App() {
@@ -22,15 +24,17 @@ function App() {
     
     <div className="wrapper">
       <Helmet>
-        <title>Welcome back</title>
+        <title>UniTextRPG</title>
       </Helmet>
 
-      <h1>Welcome back</h1>
+      <h1>UniversalTextRpg</h1>
       <BrowserRouter>
         <Routes>
-          <Route exact path='/' element={<Dashboard/>}>
+          <Route exact path='/' element={<PlayerProfile/>}>
           </Route>
           <Route exact path='/browsestories' element={<BrowseStories/>}>
+          </Route>
+          <Route exact path='/characters' element={<Characters/>}>
           </Route>
         </Routes>
       </BrowserRouter>
