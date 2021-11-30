@@ -7,22 +7,22 @@ export default function Characters() {
     {
       name: 'Zephyr',
       backstory: "Beady amber eyes, set lightly within their sockets, watch delightfully over the armies they've protected for so long. A moustache and goatee elegantly compliments his hair and leaves an intriguing memory of his fortunate survival.",
-      color: "rgb(168, 73, 92)",
+      color: "rgb(185, 72, 72)",
     },
     {
       name: 'Hagwin',
       backstory: "Brown, flowing hair slightly covers a long, radiant face. Smart sapphire eyes, set low within their sockets, watch guardedly over the mountains they've disassociated with for so long. Soft skin seductively compliments his hair and leaves a compelling memory of his luck in battles.",
-      color: "rgb(150, 60, 192)"
+      color: "rgb(165, 90, 199)"
     },
     {
       name: 'Syldria',
       backstory: "White, shoulder-length hair awkwardly hangs over a lean, lively face. Glistening hazel eyes, set thightly within their sockets, watch delightfully over the city they've loved for so long. Soft skin alluringly compliments her eyes and and leaves an intriguing memory of her past.",
-      color: "rgb(66, 92, 50)"
+      color: "rgb(90, 119, 71)"
     },
     {
       name: 'Maverick',
       backstory: "Gentle gray eyes, set wickedly within their sockets, watch cheerfully over the mountains they've been isolated from for so long. Scars reaching from just under the right eye , first running towards his fairly big lips and ending under his right eye leaves a bittersweet memory of fortunate adventures.",
-      color: "rgb(100,100,100)"
+      color: "rgb(126, 126, 126)"
     },
     {
       name: 'Vankyo',
@@ -32,7 +32,7 @@ export default function Characters() {
     {
       name: 'Serulian',
       backstory: "Brown, flowing hair slightly covers a long, radiant face. Smart sapphire eyes, set low within their sockets, watch guardedly over the mountains they've disassociated with for so long. Soft skin seductively compliments his hair and leaves a compelling memory of his luck in battles.",
-      color: "rgb(150, 60, 192)"
+      color: "rgb(255, 255, 255)"
     }
   ]);
 
@@ -94,17 +94,30 @@ export default function Characters() {
           <DisplayChar character={character} />
         ))}
         </div>
+        
         <div className="createchar-wrapper">
           <h1>Create a new character</h1>
           <form onSubmit = {AddChar}>
-            <input required id="charname" type="text" placeholder="Name" pattern="[A-Za-z]+" title="Name must be a single word made exclusively of letters." spellcheck="false" autocomplete="off" onChange={(e) => setName(e.target.value)}/><br/>
-            <textarea required id="charbackstory" placeholder="Backstory" spellcheck="false" onChange={(e) => setBackstory(e.target.value)}></textarea><br/>
-            <input id="charcolor" type="text" onChange={(e) => setColor(e.target.value)}/>
+            <input required type="text" placeholder="Name" pattern="[A-Za-z]+" title="Name must be a single word made exclusively of letters." spellcheck="false" autocomplete="off" onChange={(e) => setName(e.target.value)}/><br/>
+            <textarea required placeholder="Backstory" spellcheck="false" onChange={(e) => setBackstory(e.target.value)}></textarea><br/>
+            
+            <select required placeholder="Color" onChange={(e) => setColor(e.target.value)}>
+              <option value="rgb(255, 255, 255)" style={{backgroundColor:'rgb(255, 255, 255)',color:'black'}}>Default color</option>
+              <option value="rgb(126, 126, 126)" style={{backgroundColor:'rgb(126, 126, 126)',color:'rgb(126, 126, 126)'}}>Grey</option>
+              <option value="rgb(121, 95, 62)"   style={{backgroundColor:'rgb(121, 95, 62)',  color:'rgb(121, 95, 62)'}}>Brown</option>
+              <option value="rgb(185, 72, 72)"   style={{backgroundColor:'rgb(185, 72, 72)',  color:'rgb(185, 72, 72)'}}>Red</option>
+              <option value="rgb(173, 119, 47)"  style={{backgroundColor:'rgb(173, 119, 47)', color:'rgb(173, 119, 47)'}}>Orange</option>
+              <option value="rgb(168, 173, 92)"  style={{backgroundColor:'rgb(168, 173, 92)', color:'rgb(168, 173, 92)'}}>Yellow</option>
+              <option value="rgb(90, 119, 71)"   style={{backgroundColor:'rgb(90, 119, 71)',  color:'rgb(90, 119, 71)'}}>Green</option>
+              <option value="rgb(78, 135, 168)"  style={{backgroundColor:'rgb(78, 135, 168)', color:'rgb(78, 135, 168)'}}>Blue</option>
+              <option value="rgb(165, 90, 199)"  style={{backgroundColor:'rgb(165, 90, 199)', color:'rgb(165, 90, 199)'}}>Violet</option>
+            </select>
+
             <button type="submit" >Proceed</button>
           </form>
         </div>
 
     </div>
-    
+
   );
 }

@@ -63,9 +63,14 @@ button {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
+button:hover {
+  background: rgb(15, 15, 15);
+}
+
 /* Fancy imputsss */
 input,
-textarea {
+textarea,
+select {
   color: #ffffff;
   font-family: fancyshit;
   font-size: 20px;
@@ -90,4 +95,7 @@ textarea::placeholder {
 }
 textarea {
   font-family: normalfont;
+}
+select:hover {
+  background: rgb(15, 15, 15);
 }
