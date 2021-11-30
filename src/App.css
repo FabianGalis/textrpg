@@ -1,3 +1,24 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: fancyshit;
+}
+
+/* FONTS */
+@font-face {
+  font-family: importanttitle;
+  src: url(fonts/The\ Centurion.otf);
+}
+@font-face {
+  font-family: fancyshit;
+  src: url(fonts/AngerStyles.ttf);
+}
+
+@font-face {
+  font-family: normalfont;
+  src: url(fonts/Enchanted\ Land.otf);
+}
+
 /*SCROLLBAR*/
 /* width */
 ::-webkit-scrollbar {
@@ -19,4 +40,54 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #777777;
+}
+
+/* Bottom right corner */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* FORMS */
+/* Fancy buttonsss */
+button {
+  background-color: black;
+  font-family: fancyshit;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 10px 10px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Fancy imputsss */
+input,
+textarea {
+  color: #ffffff;
+  font-family: fancyshit;
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #000000;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  width: 100%;
+}
+input::placeholder,
+textarea::placeholder {
+  font-family: fancyshit;
+}
+
+/* Textarea resize */
+::-webkit-resizer {
+  border: 2px solid rgb(71, 71, 71);
+  border-radius: 20px;
+  background: rgb(155, 155, 155);
+}
+textarea {
+  font-family: normalfont;
 }
