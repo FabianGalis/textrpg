@@ -43,7 +43,8 @@
 }
 
 .stories .story .story-summary {
-  font-size: 20px;
+  font-size: 25px;
+  font-family: normalfont;
   background-color: #181818;
   opacity: 0;
   max-height: 0;

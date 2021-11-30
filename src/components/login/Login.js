@@ -43,16 +43,16 @@ export default function Login({ setToken }) {
         <table>
           <tr> 
               <td><img className="icon" src={Identity} alt=""/></td>
-              <td><input type="text" placeholder="Name" onChange={e => setUserName(e.target.value)}/></td>
+              <td><input className="login-input" type="text" placeholder="Name" onChange={e => setUserName(e.target.value)}/></td>
           </tr>
           <tr> 
               <td><img className="icon" style={{padding:10}} src={Keys} alt=""/></td>
-              <td><input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/></td>
+              <td><input className="login-input" type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/></td>
           </tr>
         </table>
 
         <div>
-          <button type="submit">Proceed</button> 
+          <button className="login-button" type="submit">Proceed</button> 
         </div>
       </form>
       <img style={{paddingTop:100, width:500 }} src={Line} alt=""/>
