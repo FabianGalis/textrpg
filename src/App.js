@@ -9,16 +9,16 @@ import Login from './components/login/Login';
 import PlayerProfile from './components/playerprofile/PlayerProfile';
 import Characters from './components/characters/Characters';
 import BrowseStories from './components/browsestories/BrowseStories';
-
+import Story from './components/story/Story';
 
 
 function App() {
 
   const { token, setToken } = useToken();
 
-  if(!token) {
+  /*if(!token) {
     return <Login setToken={setToken} />
-  }
+  }*/
 
   return (
     
@@ -28,6 +28,7 @@ function App() {
       </Helmet>
 
       <h1>UniversalTextRpg</h1>
+      
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<PlayerProfile/>}>
@@ -35,6 +36,8 @@ function App() {
           <Route exact path='/browsestories' element={<BrowseStories/>}>
           </Route>
           <Route exact path='/characters' element={<Characters/>}>
+          </Route>
+          <Route exact path='/storytest' element={<Story/>}>
           </Route>
         </Routes>
       </BrowserRouter>

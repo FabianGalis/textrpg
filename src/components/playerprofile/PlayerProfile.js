@@ -11,6 +11,9 @@ export default function PlayerProfile() {
 
         <img style={{display:'block',marginLeft:'auto',marginRight:'auto', paddingBottom:80, width:400 }} src={Line} alt=""/>
 
+        {/* TEMPORARY STORYTEST */}  
+        <Link to="storytest" style={{display:'flex', flexDirection: 'column',alignItems:'center'}}><button>STORY TEST</button></Link>
+
         <div id="container">
             <div id="wrapper">
                 <div id="content">
