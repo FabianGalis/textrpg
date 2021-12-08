@@ -31,7 +31,7 @@ const Chat = ({ onSend, messages }) => {
       >
         {messages.map((message) => (
           <div key={message.id} style={{ marginBottom: '.25em' }}>
-            <strong>Player {message.sender}:</strong> {message.payload}
+            <strong>Player {message.sender} ({message.payload.playername}):</strong> {message.payload.message} 
           </div>
         ))}
       </div>

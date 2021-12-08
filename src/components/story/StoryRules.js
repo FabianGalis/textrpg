@@ -1,4 +1,3 @@
-
 export const StoryRules = {
   setup: () => ({ cells: Array(9).fill(null), message: null }),
 

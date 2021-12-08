@@ -104,13 +104,13 @@ export default function Characters() {
             <select required placeholder="Color" onChange={(e) => setColor(e.target.value)}>
               <option value="rgb(255, 255, 255)" style={{backgroundColor:'rgb(255, 255, 255)',color:'black'}}>Default color</option>
               <option value="rgb(126, 126, 126)" style={{backgroundColor:'rgb(126, 126, 126)',color:'rgb(126, 126, 126)'}}>Grey</option>
-              <option value="rgb(121, 95, 62)"   style={{backgroundColor:'rgb(121, 95, 62)',  color:'rgb(121, 95, 62)'}}>Brown</option>
-              <option value="rgb(185, 72, 72)"   style={{backgroundColor:'rgb(185, 72, 72)',  color:'rgb(185, 72, 72)'}}>Red</option>
-              <option value="rgb(173, 119, 47)"  style={{backgroundColor:'rgb(173, 119, 47)', color:'rgb(173, 119, 47)'}}>Orange</option>
-              <option value="rgb(168, 173, 92)"  style={{backgroundColor:'rgb(168, 173, 92)', color:'rgb(168, 173, 92)'}}>Yellow</option>
-              <option value="rgb(90, 119, 71)"   style={{backgroundColor:'rgb(90, 119, 71)',  color:'rgb(90, 119, 71)'}}>Green</option>
-              <option value="rgb(78, 135, 168)"  style={{backgroundColor:'rgb(78, 135, 168)', color:'rgb(78, 135, 168)'}}>Blue</option>
-              <option value="rgb(165, 90, 199)"  style={{backgroundColor:'rgb(165, 90, 199)', color:'rgb(165, 90, 199)'}}>Violet</option>
+              <option value="rgb(121, 95, 62)"   style={{backgroundColor:'rgb(121, 95, 62)',  color:'rgb(121, 95, 62)'}}>  Brown</option>
+              <option value="rgb(185, 72, 72)"   style={{backgroundColor:'rgb(185, 72, 72)',  color:'rgb(185, 72, 72)'}}>  Red</option>
+              <option value="rgb(173, 119, 47)"  style={{backgroundColor:'rgb(173, 119, 47)', color:'rgb(173, 119, 47)'}}> Orange</option>
+              <option value="rgb(168, 173, 92)"  style={{backgroundColor:'rgb(168, 173, 92)', color:'rgb(168, 173, 92)'}}> Yellow</option>
+              <option value="rgb(90, 119, 71)"   style={{backgroundColor:'rgb(90, 119, 71)',  color:'rgb(90, 119, 71)'}}>  Green</option>
+              <option value="rgb(78, 135, 168)"  style={{backgroundColor:'rgb(78, 135, 168)', color:'rgb(78, 135, 168)'}}> Blue</option>
+              <option value="rgb(165, 90, 199)"  style={{backgroundColor:'rgb(165, 90, 199)', color:'rgb(165, 90, 199)'}}> Violet</option>
             </select>
 
             <button type="submit" >Proceed</button>

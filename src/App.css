@@ -96,6 +96,7 @@ textarea::placeholder {
 textarea {
   font-family: normalfont;
 }
-select:hover {
+
+option:hover {
   background: rgb(15, 15, 15);
 }

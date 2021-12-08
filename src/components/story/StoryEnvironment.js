@@ -59,7 +59,7 @@ export class StoryEnvironment extends React.Component {
         <h1>Chat test</h1>
 
         <Chat
-            onSend={this.props.sendChatMessage}
+            onSend={(m)=>this.props.sendChatMessage({message:m,playername:"PLACEHOLDER"})}
             messages={this.props.chatMessages}
           />
 
