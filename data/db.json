@@ -1,0 +1,51 @@
+{
+    "player" : [
+
+        {
+           "username": "Galis Fabian",
+           "password": "ADMIN1",
+            "characters": [
+                {
+                  "name": "Zephyr",
+                  "backstory": "Zeph backstory goes here",
+                  "color": "rgb(185, 72, 72)"
+                },
+                {
+                  "name": "Hagwin",
+                  "backstory": "Hag backstory goes here",
+                  "color": "rgb(165, 90, 199)"
+                },
+                {
+                  "name": "Syldria",
+                  "backstory": "Syl backstory goes here",
+                  "color": "rgb(90, 119, 71)"
+                }]
+        },
+
+        {
+            "username": "Galben Casian",
+            "password": "ADMIN2",
+            "characters": [
+                {
+                  "name": "Char1",
+                  "backstory": "Zeph backstory goes here",
+                  "color": "rgb(185, 72, 72)"
+                },
+                {
+                  "name": "Char2",
+                  "backstory": "Hag backstory goes here",
+                  "color": "rgb(165, 90, 199)"
+                }]
+        },
+
+
+        {
+            "username": "Denis Chera",
+            "password": "ADMIN3",
+            "characters":[]
+        }
+
+
+    ]
+
+}
