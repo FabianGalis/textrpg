@@ -5,7 +5,8 @@
 
 .scrollmenu {
   background-color: rgb(24, 24, 24);
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
 }
 

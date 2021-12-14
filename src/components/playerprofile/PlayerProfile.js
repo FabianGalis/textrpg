@@ -1,34 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Identity from '../../icons/identity.png'
 import Line from '../../icons/line.png'
 
 import "./PlayerProfile.css";
-export default function PlayerProfile() {
+export default function PlayerProfile(props) {
   return(
     <div>
-		<h1 style={{textAlign:'center'}}>Welcome back, Player</h1>
+		<h1 style={{textAlign:'center'}}>Welcome back, {props.playername}</h1>
 
         <img style={{display:'block',marginLeft:'auto',marginRight:'auto', paddingBottom:80, width:400 }} src={Line} alt=""/>
-
+        
         {/* TEMPORARY STORYTEST */}  
-        <Link to="storytest" style={{display:'flex', flexDirection: 'column',alignItems:'center'}}><button>STORY TEST</button></Link>
+        <Link to="storytest" style={{display:'flex', flexDirection: 'column',alignItems:'center'}}><button>Story Demo</button></Link>
 
         <div id="container">
             <div id="wrapper">
                 <div id="content">
-                    <div class="month">      
+                    <div className="month">
                         <ul>
-                            <li class="prev">&#10094;~</li>
-                            <li class="next">~&#10095;</li>
+                            <li className="prev">&#10094;~</li>
+                            <li className="next">~&#10095;</li>
                             <li>
-                            November<br/>
+                            December<br/>
                             <span>2021</span>
                             </li>
                         </ul>
                     </div>
 
-                    <ul class="weekdays">
+                    <ul className="weekdays">
                     <li>Mo</li>
                     <li>Tu</li>
                     <li>We</li>
@@ -38,7 +37,7 @@ export default function PlayerProfile() {
                     <li>Su</li>
                     </ul>
 
-                    <ul class="days">  
+                    <ul className="days">
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
@@ -50,9 +49,9 @@ export default function PlayerProfile() {
                     <li>9</li>
                     <li>10</li>
                     <li>11</li>
-                    <li><span class="active">12</span></li>
-                    <li><span class="active">13</span></li>
-                    <li><span class="active">14</span></li>
+                    <li><span className="active">12</span></li>
+                    <li><span className="active">13</span></li>
+                    <li><span className="active">14</span></li>
                     <li>15</li>
                     <li>16</li>
                     <li>17</li>
@@ -73,8 +72,8 @@ export default function PlayerProfile() {
                 </div>
             </div>
             <div id="nameicon">
-                <img style={{paddingTop:10, width:200 }} src={Identity} alt=""/>
-                <h1>Player name</h1>
+                <p style={{fontFamily:'initials',fontSize:'130px'}}>{props.playername.charAt(0).toUpperCase()}</p>
+                <h1>{props.playername}</h1>
                 <p>Along with a few details</p>
 
                 <Link to="browsestories"><button>Browse stories</button></Link>
@@ -83,23 +82,23 @@ export default function PlayerProfile() {
             <div id="extra">
 
                 <p>Stat 1</p>
-                <div class="container">
-                <div class="stat one">90%</div>
+                <div className="container">
+                <div className="stat one">90%</div>
                 </div>
 
                 <p>Stat 2</p>
-                <div class="container">
-                <div class="stat two">30%</div>
+                <div className="container">
+                <div className="stat two">30%</div>
                 </div>
 
                 <p>Stat 3</p>
-                <div class="container">
-                <div class="stat three">65%</div>
+                <div className="container">
+                <div className="stat three">65%</div>
                 </div>
 
                 <p>Stat 4</p>
-                <div class="container">
-                <div class="stat four">60%</div>
+                <div className="container">
+                <div className="stat four">60%</div>
                 </div>
             </div>
         </div>

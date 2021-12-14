@@ -14,16 +14,18 @@ const Chat = ({ onSend, messages }) => {
   };
 
   return (
-    <div>
+    <div style={{marginLeft:"800px",position: 'relative'}/*CHANGE TO FIXED FOR FINAL VERSION*/ }>
+      <h2>Chat</h2>
       <div
         style={{
             fontFamily:'normalfont',
             fontSize:20,
             height: 200,
-            maxWidth:'30%',
+            
             padding: '.5em',
-            overflow: 'scroll',
-
+            overflowY: 'scroll',
+            overflowWrap:'break-word',
+            
             border: 0,
             borderRadius: '10px',
             boxShadow: '0 0 5px rgba(255, 255, 255, 0.4)'
@@ -31,13 +33,15 @@ const Chat = ({ onSend, messages }) => {
       >
         {messages.map((message) => (
           <div key={message.id} style={{ marginBottom: '.25em' }}>
-            <strong>Player {message.sender} ({message.payload.playername}):</strong> {message.payload.message} 
+            <strong>Player {message.sender}:</strong><br/>
+            {message.payload.message}
+            <hr style={{opacity:'30%'}}/>
           </div>
         ))}
       </div>
       <form onSubmit={triggerSend}>
-        <input onChange={onChange} style={{width:'30%'}} value={message} placeholder="Write to chat" />
-        <button type="submit">Send</button>
+        <input onChange={onChange} style={{borderTopRightRadius:0,borderBottomRightRadius:0,width:"80%"}} value={message} placeholder="Write to chat" />
+        <button type="submit" style={{borderTopLeftRadius:0,borderBottomLeftRadius:0}}>Send</button>
       </form>
     </div>
   );

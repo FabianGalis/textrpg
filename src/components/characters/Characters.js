@@ -2,8 +2,8 @@ import React, { useState }  from 'react';
 import { Link } from 'react-router-dom';
 import './Characters.css';
 
-export default function Characters() {
-  const [characters,setCharacters] = useState([
+export default function Characters(props) {
+  /*const [characters,setCharacters] = useState([
     {
       name: 'Zephyr',
       backstory: "Beady amber eyes, set lightly within their sockets, watch delightfully over the armies they've protected for so long. A moustache and goatee elegantly compliments his hair and leaves an intriguing memory of his fortunate survival.",
@@ -34,8 +34,9 @@ export default function Characters() {
       backstory: "Brown, flowing hair slightly covers a long, radiant face. Smart sapphire eyes, set low within their sockets, watch guardedly over the mountains they've disassociated with for so long. Soft skin seductively compliments his hair and leaves a compelling memory of his luck in battles.",
       color: "rgb(255, 255, 255)"
     }
-  ]);
-
+  ]);*/
+  const [characters,setCharacters] = useState(props.characters);
+  
   const [name,setName] = useState();
   const [backstory,setBackstory] = useState();
   const [color,setColor] = useState();

@@ -2,39 +2,51 @@
     "player" : [
 
         {
-           "username": "Galis Fabian",
+           "username": "FabianGalis",
            "password": "ADMIN1",
+           "details":"ADMIN1fdgd asdhbsjfhvjsd",
             "characters": [
-                {
-                  "name": "Zephyr",
-                  "backstory": "Zeph backstory goes here",
-                  "color": "rgb(185, 72, 72)"
-                },
-                {
-                  "name": "Hagwin",
-                  "backstory": "Hag backstory goes here",
-                  "color": "rgb(165, 90, 199)"
-                },
-                {
-                  "name": "Syldria",
-                  "backstory": "Syl backstory goes here",
-                  "color": "rgb(90, 119, 71)"
-                }]
+              {
+                "name": "Zephyr",
+               " backstory": "Beady amber eyes, set lightly within their sockets, watch delightfully over the armies they've protected for so long. A moustache and goatee elegantly compliments his hair and leaves an intriguing memory of his fortunate survival.",
+                "color": "rgb(185, 72, 72)"
+              },
+              {
+                "name": "Hagwin",
+                "backstory": "Brown, flowing hair slightly covers a long, radiant face. Smart sapphire eyes, set low within their sockets, watch guardedly over the mountains they've disassociated with for so long. Soft skin seductively compliments his hair and leaves a compelling memory of his luck in battles.",
+                "color": "rgb(165, 90, 199)"
+              },
+              {
+                "name": "Syldria",
+                "backstory": "White, shoulder-length hair awkwardly hangs over a lean, lively face. Glistening hazel eyes, set thightly within their sockets, watch delightfully over the city they've loved for so long. Soft skin alluringly compliments her eyes and and leaves an intriguing memory of her past.",
+                "color": "rgb(90, 119, 71)"
+              },
+              {
+                "name": "Maverick",
+                "backstory": "Gentle gray eyes, set wickedly within their sockets, watch cheerfully over the mountains they've been isolated from for so long. Scars reaching from just under the right eye , first running towards his fairly big lips and ending under his right eye leaves a bittersweet memory of fortunate adventures.",
+                "color": "rgb(126, 126, 126)"
+              },
+              {
+                "name": "Merula",
+                "backstory": "White, shoulder-length hair awkwardly hangs over a lean, lively face. Glistening hazel eyes, set thightly within their sockets, watch delightfully over the city they've loved for so long. Soft skin alluringly compliments her eyes and and leaves an intriguing memory of her past.",
+                "color": "rgb(168, 173, 92)"
+              }]
         },
 
         {
-            "username": "Galben Casian",
+            "username": "CasianGalben",
             "password": "ADMIN2",
+            "details":"ADMIN2fd jfhvjsd",
             "characters": [
                 {
-                  "name": "Char1",
-                  "backstory": "Zeph backstory goes here",
-                  "color": "rgb(185, 72, 72)"
+                  "name": "Vankyo",
+                  "backstory": "Red, dreadlocks gently hangs over a lean, charming face. Shining green eyes, set wickedly within their sockets, watch warmly over the tribe they've rarely felt at home at for so long. A gunshot left a mark reaching from the bottom of the left cheek , first running towards thin lips and ending on his chin leaves a tormenting burden of his unfortunate past.",
+                  "color": "rgb(168, 173, 92)"
                 },
                 {
-                  "name": "Char2",
-                  "backstory": "Hag backstory goes here",
-                  "color": "rgb(165, 90, 199)"
+                  "name": "Serulian",
+                  "backstory": "Brown, flowing hair slightly covers a long, radiant face. Smart sapphire eyes, set low within their sockets, watch guardedly over the mountains they've disassociated with for so long. Soft skin seductively compliments his hair and leaves a compelling memory of his luck in battles.",
+                  "color": "rgb(255, 255, 255)"
                 }]
         },
 
@@ -42,6 +54,7 @@
         {
             "username": "Denis Chera",
             "password": "ADMIN3",
+            "details":"ADMIN3aaaaaaaaaaaaaaaaa",
             "characters":[]
         }
 

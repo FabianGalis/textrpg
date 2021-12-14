@@ -12,7 +12,7 @@ export class StoryEnvironment extends React.Component {
   }
 
   render() {
-    let winner = '';
+    /*let winner = '';
     if (this.props.ctx.gameover) {
       winner =
         this.props.ctx.gameover.winner !== undefined ? (
@@ -21,47 +21,64 @@ export class StoryEnvironment extends React.Component {
           <div id="winner">Draw!</div>
         );
     }
-
-    const cellStyle = {
-      border: '1px solid #555',
-      width: '50px',
-      height: '50px',
-      lineHeight: '50px',
-      textAlign: 'center',
+*/
+    const msgStyle = {
+      border: 0,
+      borderRadius: '10px',
+      boxShadow: '0 0 5px rgba(255, 255, 255, 0.4)',
+      padding:'10px',
+      marginLeft:'60px',
+      marginRight:'40%',
+      fontFamily:'normalfont',
+      fontSize:'18px'
     };
 
-    let tbody = [];
-    for (let i = 0; i < 3; i++) {
-      let cells = [];
-      for (let j = 0; j < 3; j++) {
-        const id = 3 * i + j;
-        cells.push(
-          <td style={cellStyle} key={id} onClick={() => this.onClick(id)}>
-            {this.props.G.cells[id]}
-          </td>
-        );
-      }
-      tbody.push(<tr key={i}>{cells}</tr>);
+    let displayMessages = [];
+    for (var message of this.props.G.messages) {
+      displayMessages.push(
+        <div style={{padding:'20px',}}>
+          <div style={{fontFamily:'initials',fontSize:'50px',float:'left'}}>
+            {message[0]==="0"?"S":"P"}
+          </div>
+          <div style={msgStyle}>
+            <h2 style={{fontFamily:'fancyshit'}}>{message[0]==="0"?"StoryLord":"PLayerName"}</h2>
+            <hr style={{opacity:"20%"}}/>
+            {message[1]}
+          </div>
+        </div>
+      );
     }
+    
+    const eventStyle = {
+      borderRadius: '10px',
+      boxShadow: '0 0 5px rgba(255, 255, 255, 0.4)',
+      display:'inline',
+      padding:'10px'
+    };
+
+    let displayEvent = [];
+    for (message of this.props.G.currentEventProbs) {
+      displayEvent.push(
+        <div style={{padding:'20px',display:'inline',marginLeft:'100px'}}>
+          <div style={eventStyle}>
+            {message}
+          </div>
+        </div>
+        );
+        }
 
     return (
       <div>
-        {/*
-        <table id="board">
-          <tbody>{tbody}</tbody>
-        </table>
-        Next Message TEST: {this.props.G.message}
-
-        {winner}
-
-        */}
-
-        <h1>Chat test</h1>
 
         <Chat
-            onSend={(m)=>this.props.sendChatMessage({message:m,playername:"PLACEHOLDER"})}
-            messages={this.props.chatMessages}
-          />
+          onSend={(m)=>this.props.sendChatMessage({message:m})}
+          messages={this.props.chatMessages}
+        />
+        
+        
+
+        {displayMessages}
+        {displayEvent}
 
       </div>
     );
