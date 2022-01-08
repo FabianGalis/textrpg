@@ -14,7 +14,7 @@ const Chat = ({ onSend, messages }) => {
   };
 
   return (
-    <div style={{marginLeft:"800px",position: 'relative'}/*CHANGE TO FIXED FOR FINAL VERSION*/ }>
+    <div style={{marginLeft:"80%",position: 'fixed'}/*CHANGE TO FIXED FOR FINAL VERSION*/ }>
       <h2>Chat</h2>
       <div
         style={{

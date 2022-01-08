@@ -1,5 +1,4 @@
 import React, { useState }  from 'react';
-import { Link } from 'react-router-dom';
 import './BrowseStories.css';
 
 function DisplayStory ({story, index, togglestory}) {
@@ -92,8 +91,6 @@ function BrowseStories () {
   return (
     <div className="App">
       
-      <Link to="/" style={{borderStyle:'inset',fontSize:30}}>Return</Link>
-
       <h1 style={{textAlign:'center'}}>Browse stories</h1>
 
       <div className="stories">

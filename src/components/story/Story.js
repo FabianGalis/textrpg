@@ -1,31 +1,23 @@
 import { Client } from 'boardgame.io/react';
 import { StoryRules } from './StoryRules';
-import { StoryEnvironment } from './StoryEnvironment';
+import  StoryEnvironment  from './StoryEnvironment';
 import { SocketIO } from 'boardgame.io/multiplayer'
 
-const Story = Client({
-    game: StoryRules,
-    board: StoryEnvironment,
-    multiplayer: SocketIO({ server: 'localhost:8000' }),
-      });
-
-function Stories() {
-    
+export default function Stories(props) {
+    const Story = Client({
+        game: StoryRules,
+        board: StoryEnvironment,
+        numPlayers:3,//modify later to the StoryLord's will
+        multiplayer: SocketIO({ server: 'localhost:8000' }),
+        debug: true,//set this to false in final product
+          });
+          
     return (
     <div>
-        
-        <Story playerID="0" matchID="An interesting story" />
-        <br/>
-        <br/>
-        <hr style={{backgroundColor:'red'}}/>
-        SCREEN 2
-        <hr style={{backgroundColor:'red'}}/>
-        <br/>
-        <br/>
-        <Story playerID="1" matchID="An interesting story" />
-
+        <Story playerID={(props.playerdata.idplayer-1).toString()/*temporary props*/}
+        matchID="An interesting story"
+        playerdata={props.playerdata}
+        currentchar={props.currentchar}/>
     </div>
     )
 }
-
-export default Stories;

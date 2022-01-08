@@ -1,9 +1,7 @@
 import { INVALID_MOVE } from 'boardgame.io/core';
 
-
-
 export const StoryRules = {
-  setup: () => ({ messages: Array(),currentEventProbs:Array(),}),
+  setup: () => ({ messages: [], currentEventProbs:[]}),
 
   turn: {
     minMoves: 1,
@@ -43,11 +41,11 @@ export const StoryRules = {
       if(ctx.currentPlayer!=="0")return INVALID_MOVE;
 
       G.messages.splice(0,G.messages.length);
-      var finalmsg="WINNERS: ";
+      var finalmsg="WINNERS:   ";
       for (var winner of winnerIDs) {
-        finalmsg=finalmsg+winner+" ";
+        finalmsg=finalmsg+winner+"    ";
       }
-      G.messages.push(finalmsg);
+      G.messages.push([ctx.currentPlayer,finalmsg]);
       ctx.events.endGame();
 
 

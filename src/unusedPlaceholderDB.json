@@ -1,14 +1,13 @@
 {
-    "player" : [
+    "players" : [
 
         {
            "username": "FabianGalis",
-           "password": "ADMIN1",
            "details":"ADMIN1fdgd asdhbsjfhvjsd",
             "characters": [
               {
                 "name": "Zephyr",
-               " backstory": "Beady amber eyes, set lightly within their sockets, watch delightfully over the armies they've protected for so long. A moustache and goatee elegantly compliments his hair and leaves an intriguing memory of his fortunate survival.",
+                "backstory": "Beady amber eyes, set lightly within their sockets, watch delightfully over the armies they've protected for so long. A moustache and goatee elegantly compliments his hair and leaves an intriguing memory of his fortunate survival.",
                 "color": "rgb(185, 72, 72)"
               },
               {
@@ -35,7 +34,6 @@
 
         {
             "username": "CasianGalben",
-            "password": "ADMIN2",
             "details":"ADMIN2fd jfhvjsd",
             "characters": [
                 {
@@ -52,8 +50,7 @@
 
 
         {
-            "username": "Denis Chera",
-            "password": "ADMIN3",
+            "username": "DenisChera",
             "details":"ADMIN3aaaaaaaaaaaaaaaaa",
             "characters":[]
         }

@@ -1,63 +1,47 @@
-import React,{ useState, useEffect } from 'react';
-import './App.css';
+import React,{useEffect} from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 
-import useToken from './useToken';
+import './App.css';
+import MakePersistentPls from './makePersistentPls';
 
 import Login from './components/login/Login';
+import Navbar from './components/navbar/Navbar';
 import PlayerProfile from './components/playerprofile/PlayerProfile';
 import Characters from './components/characters/Characters';
 import BrowseStories from './components/browsestories/BrowseStories';
 import Story from './components/story/Story';
 
 
-function App() {
+export default function App() {
 
-  const { token, setToken } = useToken();
-
-  //universal playerdata for the whole session, boiiii!
-  const [playerdata,setPlayerdata] = useState(null);
+  //universal data for the whole app
+  const [playerdata,setPlayerdata] = MakePersistentPls(null,"playerdata");
+  const [currentchar,setCurrentchar] = MakePersistentPls(null,"currentchar");
 
   useEffect(() => {
-    fetch('http://localhost:8070/player')
-    .then( res => {
-      return res.json();
-    })
-    .then( data => {
-      setPlayerdata(data[1]);//CHANGE DATA HERE AFTER LOGIN IS IMPLEMENTED
-    });
-  },[]);
+    document.title = "UniTextRPG"
+ });
 
-  if(!token) {
-    return <Login setToken={setToken} />
-  }
+  if (!playerdata) return <Login setPlayerdata={setPlayerdata} />
 
   return (
     
-    <div className="wrapper">
-      <Helmet>
-        <title>UniTextRPG</title>
-      </Helmet>
-      
-      <h1>UniversalTextRpg</h1>
-      <hr style={{opacity:"20%"}}/>
-
+    <div>
       <BrowserRouter>
+
+        <Navbar setPlayerdata={setPlayerdata/*FOR LOGGING OUT*/}/>
+
         <Routes>
-          <Route exact path='/' element={<PlayerProfile playername={playerdata["username"]}/>}>
+          <Route exact path='/' element={<PlayerProfile playername={playerdata.username} currentchar={currentchar}/>}>
           </Route>
           <Route exact path='/browsestories' element={<BrowseStories/>}>
           </Route>
-          <Route exact path='/characters' element={<Characters characters={playerdata["characters"]}/>}>
+          <Route exact path='/characters' element={<Characters idplayer={playerdata.idplayer} setCurrentchar={setCurrentchar}/>}>
           </Route>
-          <Route exact path='/storytest' element={<Story/>}>
+          <Route exact path='/storytest' element={<Story playerdata={playerdata} currentchar={currentchar}/>}>
           </Route>
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
-
-
-export default App;

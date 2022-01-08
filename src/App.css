@@ -19,6 +19,11 @@ body {
   src: url(fonts/Enchanted\ Land.otf);
 }
 
+@font-face {
+  font-family: initials;
+  src: url(fonts/Silvus.ttf);
+}
+
 /*SCROLLBAR*/
 /* width */
 ::-webkit-scrollbar {
@@ -95,6 +100,8 @@ textarea::placeholder {
 }
 textarea {
   font-family: normalfont;
+  max-width: 900px;
+  min-width: 300px;
 }
 
 option:hover {

@@ -1,17 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Line from '../../icons/line.png'
 
 import "./PlayerProfile.css";
+
 export default function PlayerProfile(props) {
   return(
     <div>
-		<h1 style={{textAlign:'center'}}>Welcome back, {props.playername}</h1>
+		<h1 style={{textAlign:'center',paddingTop:50}}>Welcome back, {props.playername}</h1>
 
         <img style={{display:'block',marginLeft:'auto',marginRight:'auto', paddingBottom:80, width:400 }} src={Line} alt=""/>
-        
-        {/* TEMPORARY STORYTEST */}  
-        <Link to="storytest" style={{display:'flex', flexDirection: 'column',alignItems:'center'}}><button>Story Demo</button></Link>
 
         <div id="container">
             <div id="wrapper">
@@ -21,8 +18,8 @@ export default function PlayerProfile(props) {
                             <li className="prev">&#10094;~</li>
                             <li className="next">~&#10095;</li>
                             <li>
-                            December<br/>
-                            <span>2021</span>
+                            January<br/>
+                            <span>2022</span>
                             </li>
                         </ul>
                     </div>
@@ -74,10 +71,16 @@ export default function PlayerProfile(props) {
             <div id="nameicon">
                 <p style={{fontFamily:'initials',fontSize:'130px'}}>{props.playername.charAt(0).toUpperCase()}</p>
                 <h1>{props.playername}</h1>
-                <p>Along with a few details</p>
+                {
+                    props.currentchar?[
+                        <div>
+                            <h2 style={{textAlign:'center'}}>playing as</h2>
+                            <h1 style={{color:props.currentchar.color,paddingBottom:30}}>{props.currentchar.name}</h1>
+                        </div>
+                    ]:[]
+                }
+                
 
-                <Link to="browsestories"><button>Browse stories</button></Link>
-                <Link to="characters"><button>Characters</button></Link>
             </div>
             <div id="extra">
 
