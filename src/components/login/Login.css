@@ -35,6 +35,16 @@
 }
 
 .login-button {
-  float: right;
   padding: 10px 60px;
+}
+
+.revealpass {
+  padding: 5px;
+  height: 40px;
+  margin-left: 10px;
+  margin-bottom: -10px;
+  border-radius: 10px;
+}
+.revealpass:hover {
+  background: rgb(15, 15, 15);
 }

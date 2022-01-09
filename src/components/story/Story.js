@@ -9,12 +9,12 @@ export default function Stories(props) {
         board: StoryEnvironment,
         numPlayers:3,//modify later to the StoryLord's will
         multiplayer: SocketIO({ server: 'localhost:8000' }),
-        debug: true,//set this to false in final product
+        debug: false,//set this to false in final product
           });
           
     return (
     <div>
-        <Story playerID={(props.playerdata.idplayer-1).toString()/*temporary props*/}
+        <Story playerID={(props.playerdata.idplayer-1).toString()/*all are temporary props*/}
         matchID="An interesting story"
         playerdata={props.playerdata}
         currentchar={props.currentchar}/>

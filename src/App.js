@@ -29,7 +29,11 @@ export default function App() {
     <div>
       <BrowserRouter>
 
-        <Navbar setPlayerdata={setPlayerdata/*FOR LOGGING OUT*/}/>
+        <Navbar
+          setPlayerdata={setPlayerdata/*FOR LOGGING OUT*/}
+          setCurrentchar={setCurrentchar/*FOR LOGGING OUT*/}
+          currentchar={currentchar/*FOR DISPLAYING CHAR NAME ON TOP*/}
+        />
 
         <Routes>
           <Route exact path='/' element={<PlayerProfile playername={playerdata.username} currentchar={currentchar}/>}>

@@ -81,7 +81,7 @@ export default function Characters({idplayer,setCurrentchar}) {
         {/*hard to understand code below..
         if chars are rendered, then iterate. else, no iteration through smth null, cuz error*/}
         {characters?[
-        <div className='scrollmenu'>
+        <div key="scrollmenu" className='scrollmenu'>
           {characters.map((character, i) => (
           <DisplayChar key={character.idcharacter} character={character} />
         ))}

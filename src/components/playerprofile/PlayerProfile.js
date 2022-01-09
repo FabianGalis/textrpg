@@ -73,7 +73,7 @@ export default function PlayerProfile(props) {
                 <h1>{props.playername}</h1>
                 {
                     props.currentchar?[
-                        <div>
+                        <div key="char">
                             <h2 style={{textAlign:'center'}}>playing as</h2>
                             <h1 style={{color:props.currentchar.color,paddingBottom:30}}>{props.currentchar.name}</h1>
                         </div>

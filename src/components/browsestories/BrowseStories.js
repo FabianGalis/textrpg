@@ -16,7 +16,7 @@ function DisplayStory ({story, index, togglestory}) {
 			</div>
 			<div className="story-summary">
         {story.summary}
-        <button>Join</button> 
+        <button style={{float:"right"}}>Join</button> 
 			</div>
       
 		</div>
@@ -95,7 +95,7 @@ function BrowseStories () {
 
       <div className="stories">
         {stories.map((story, i) => (
-          <DisplayStory story={story} index={i} togglestory={togglestory} />
+          <DisplayStory key={story.title} story={story} index={i} togglestory={togglestory} />
         ))}
       </div>
 

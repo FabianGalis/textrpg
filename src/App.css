@@ -59,7 +59,6 @@ button {
   font-family: fancyshit;
   font-size: 20px;
   color: white;
-  border-radius: 5px;
   margin: 10px 0px;
   padding: 10px 10px;
   cursor: pointer;
@@ -102,6 +101,7 @@ textarea {
   font-family: normalfont;
   max-width: 900px;
   min-width: 300px;
+  min-height: 80px;
 }
 
 option:hover {

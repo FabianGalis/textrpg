@@ -1,0 +1,40 @@
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.helpmenu div {
+  display: flex;
+}
+
+.helpmenu div span {
+  flex: 1;
+}
+
+.helpmenu div span:first-of-type {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.helpmenu div span:last-of-type {
+  padding-left: 5px;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: grey;
+}
+
+/* selected link */
+a:active {
+  color: rgb(71, 71, 71);
+}
