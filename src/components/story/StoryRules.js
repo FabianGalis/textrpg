@@ -21,7 +21,7 @@ export const StoryRules = {
       G.messages.splice(0,G.messages.length);
     },
     sendEventProbs:(G,ctx,...eventprobs) => {
-      if(ctx.currentPlayer!=="0"||eventprobs.length>6)return INVALID_MOVE;
+      if(ctx.currentPlayer!=="0"||eventprobs.length>5)return INVALID_MOVE;
       
       for (var eventprob of eventprobs) {
         G.currentEventProbs.push(eventprob);

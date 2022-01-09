@@ -1,6 +1,17 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## For testing the project
+
+You will need to import the sql tables located in the databaseSchema folder.
+You will need to run:
+
+### `npm start`
+
+To start the application.
+
+### `npm run textrpg1`
+
+To run the two servers for the game and for the database connection.
 
 ## Available Scripts
 
@@ -25,7 +36,6 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 

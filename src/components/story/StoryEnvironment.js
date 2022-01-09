@@ -27,8 +27,11 @@ export default function StoryEnvironment (props) {
         //ending turn
         if(msg.search("What will you do\\?")!==-1)props.events.endTurn();
         //ending match
-        if(msg.search("Praise ")!==-1)
+        if(msg.search("Praise ")!==-1){
+          props.moves.clearEventProbs();
           props.moves.endStory.apply(null,msg.split('Praise ')[1].split(" for their victory\\!")[0].split(",").map(Number));
+        }
+          
 
         //ACTIONS FOR PLAYERS
         //reacting to events
@@ -86,15 +89,13 @@ export default function StoryEnvironment (props) {
     let displayEvent = [];
     for (message of props.G.currentEventProbs) {
       displayEvent.push(
-        <div style={{padding:'20px',display:'inline',marginLeft:'10%'}}>
+        <div style={{display:'inline',marginLeft:'10%'}}>
           <div style={eventStyle}>
-            {message}
+            {message}<span style={{fontSize:13}}>%</span>
           </div>
         </div>
         );
         }
-    
-    
     
     return (
       <div>
@@ -113,6 +114,7 @@ export default function StoryEnvironment (props) {
           ]:[]}
           
         <div style={{margin:"3%"}}>{displayEvent}</div>
+        <hr style={{ opacity: "20%", marginBottom: "10%", width: "80%" }} />
         {
           props.ctx.gameover?[
             <div style={{fontSize:30,textAlign:"right", width: "73.3%", marginLeft: "6%", height: "17%", position: 'fixed', bottom: 0 }}>
@@ -120,7 +122,6 @@ export default function StoryEnvironment (props) {
             </div>
           ]:[
             <div>
-            <hr style={{ opacity: "20%", marginBottom: "10%", width: "80%" }} />
               <form onSubmit={act} id="actform">
                 <textarea style={{ maxWidth: "100%", resize: "none", width: "73.3%", marginLeft: "6%", height: "17%", position: 'fixed', bottom: 0 }}
                   type="text"
@@ -134,24 +135,21 @@ export default function StoryEnvironment (props) {
                   />
                 <button style={{ width: "5%", height: "17%", position: 'fixed', bottom: 0 }} type="submit">Act</button>
               </form>
-
-            <Popup trigger={<button style={{ boxShadow: 'none', position: 'fixed', bottom: 0, right: 0 }}>?</button>} modal>
-                <div className="helpmenu" style={{ textAlign: 'center', fontFamily: "normalfont", backgroundColor: "black", fontSize: 30, borderRadius: 10, boxShadow: "0 0 15px rgba(255, 255, 255, 0.4)", padding: 20 }}>
-                  <h2>Key phrases as StoryLord:</h2>
-                  <div><span><i>"What will you do?" </i></span> <span>Let players act.</span></div><br />
-                  <div><span><i>"Your chances are 20,30,"..."50." </i></span> <span> Launch an event.<br /> No more than 6 </span></div><br />
-                  <div><span><i>"Chances were taken."</i></span> <span>Discard a launched event.</span></div><br />
-                  <div><span><i>"Praise 1,2".."4 for their victory!"</i></span> <span>Announces winners.</span></div><br />
-                  <h2>as Player:</h2>
-                  <div><span><i>"The first." to "The sixth."</i></span> <span>Select an event probability.</span></div>
-                  <CSVLink style={{bottom: 0}} data={props.G.messages} filename="MessageHistory"><button>Export message history</button></CSVLink>
-                </div>
-              </Popup>
-              
-              </div>
+            </div>
           ]
         }
-
+        <Popup trigger={<button style={{ boxShadow: 'none', position: 'fixed', bottom: 0, right: 0 }}>?</button>} modal>
+          <div className="helpmenu" style={{ textAlign: 'center', fontFamily: "normalfont", backgroundColor: "black", fontSize: 30, borderRadius: 10, boxShadow: "0 0 15px rgba(255, 255, 255, 0.4)", padding: 20 }}>
+            <h2>Key phrases as StoryLord:</h2>
+            <div><span><i>"What will you do?" </i></span> <span>Let players act.</span></div><br />
+            <div><span><i>"Your chances are 20,30,"..."50." </i></span> <span> Launch an event.<br /> No more than 5</span></div><br />
+            <div><span><i>"Chances were taken."</i></span> <span>Discard a launched event.</span></div><br />
+            <div><span><i>"Praise 1,2".."4 for their victory!"</i></span> <span>Announces winners.</span></div><br />
+            <h2>as Player:</h2>
+            <div><span><i>"The first." to "The sixth."</i></span> <span>Select an event probability.</span></div>
+            <CSVLink style={{bottom: 0}} data={props.G.messages} filename="MessageHistory"><button>Export message history</button></CSVLink>
+          </div>
+        </Popup>
         <img style={{ position: 'fixed', bottom: 0, right: 0, width: "18%",zIndex:-1 }} src={Corner} alt="" />
       </div>
     );
